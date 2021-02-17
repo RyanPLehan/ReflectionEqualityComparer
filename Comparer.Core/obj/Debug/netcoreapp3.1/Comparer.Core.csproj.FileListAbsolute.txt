@@ -1,0 +1,9 @@
+C:\Work\RPL\Comparer\Comparer.Core\bin\Debug\netcoreapp3.1\Comparer.Core.deps.json
+C:\Work\RPL\Comparer\Comparer.Core\bin\Debug\netcoreapp3.1\Comparer.Core.dll
+C:\Work\RPL\Comparer\Comparer.Core\bin\Debug\netcoreapp3.1\Comparer.Core.pdb
+C:\Work\RPL\Comparer\Comparer.Core\obj\Debug\netcoreapp3.1\Comparer.Core.csprojAssemblyReference.cache
+C:\Work\RPL\Comparer\Comparer.Core\obj\Debug\netcoreapp3.1\Comparer.Core.AssemblyInfoInputs.cache
+C:\Work\RPL\Comparer\Comparer.Core\obj\Debug\netcoreapp3.1\Comparer.Core.AssemblyInfo.cs
+C:\Work\RPL\Comparer\Comparer.Core\obj\Debug\netcoreapp3.1\Comparer.Core.csproj.CoreCompileInputs.cache
+C:\Work\RPL\Comparer\Comparer.Core\obj\Debug\netcoreapp3.1\Comparer.Core.dll
+C:\Work\RPL\Comparer\Comparer.Core\obj\Debug\netcoreapp3.1\Comparer.Core.pdb
