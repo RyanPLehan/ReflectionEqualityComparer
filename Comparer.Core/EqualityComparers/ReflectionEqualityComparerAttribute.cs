@@ -8,7 +8,7 @@ namespace Comparer.Core.EqualityComparers
     /// <author>
     /// Name:   Lehan, Ryan
     /// Date:   05/01/2018
-    /// GitHub: 
+    /// GitHub: https://github.com/RyanPLehan/ReflectionEqualityComparer
     /// </author>
 
     [AttributeUsage(AttributeTargets.Property, Inherited = false)]

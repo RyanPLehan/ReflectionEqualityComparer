@@ -16,10 +16,18 @@ namespace Comparer.Core.EqualityComparers
     /// <author>
     /// Name:   Lehan, Ryan
     /// Date:   05/01/2018
-    /// GitHub: 
+    /// GitHub: https://github.com/RyanPLehan/ReflectionEqualityComparer
     /// </author>
     public class ReflectionEqualityComparer<T> : IEqualityComparer<T>
     {
+        private readonly IEnumerable<string> ComparisonPropertyNames;
+        private readonly IEnumerable<string> HashCodePropertyNames;
+
+        public ReflectionEqualityComparer()
+        {
+            this.ComparisonPropertyNames = this.CreateComparisonPropertyNameList();
+            this.HashCodePropertyNames = this.CreateHashCodePropertyNameList();
+        }
 
         public bool Equals(T x, T y)
         {
@@ -34,8 +42,7 @@ namespace Comparer.Core.EqualityComparers
 
             if (x != null && y != null)
             {
-                var propertyNames = CreatePropertyComparisonList();
-                foreach (var propName in propertyNames)
+                foreach (var propName in this.ComparisonPropertyNames)
                 {
                     // First sign of inequality, exit loop
                     if (!areEqual)
@@ -55,8 +62,7 @@ namespace Comparer.Core.EqualityComparers
             StringBuilder stringBuilder = new StringBuilder();
             if (obj != null)
             {
-                var propertyNames = CreatePropertyHashCodeList();
-                foreach (var propName in propertyNames)
+                foreach (var propName in this.HashCodePropertyNames)
                 {
                     var value = typeof(T).GetProperty(propName).GetValue(obj);
                     if (value != null)
@@ -69,7 +75,7 @@ namespace Comparer.Core.EqualityComparers
 
 
         #region Private
-        private IEnumerable<string> CreatePropertyComparisonList()
+        private IEnumerable<string> CreateComparisonPropertyNameList()
         {
             IList<string> items = new List<string>();
 
@@ -87,7 +93,7 @@ namespace Comparer.Core.EqualityComparers
         }
 
 
-        private IEnumerable<string> CreatePropertyHashCodeList()
+        private IEnumerable<string> CreateHashCodePropertyNameList()
         {
             IList<string> items = new List<string>();
 
